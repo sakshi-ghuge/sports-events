@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, serif;
+}
+
+#speaker {
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: 20px 40px;
+    background: rgb(245, 242, 242);
+    min-height: 100vh;
+}
+
+.logo {
+    margin-right: 570px;
+    color: white;
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: right;
+    padding: 15px 0;
+    list-style-type: none;
+}
+
+.navbar li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    text-transform: uppercase;
+}
+
+.navbar li a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+}
+
+.heading, .heading2 {
+    background: rgb(245, 242, 242);
+    color: #373333;
+    margin-bottom: 30px;
+    padding: 60px 0 30px 0;
+    grid-column: 1/-1;
+    text-align: center;
+}
+
+.card {
+    display: grid;
+    position: relative;
+    grid-template-rows: auto 1fr;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin: 10px 20px;
+}
+
+.card img {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    border-radius: 15px 15px 0 0;
+}
+
+.details {
+    padding: 20px 10px;
+    display: grid;
+    grid-template-rows: auto 1fr 50px;
+    grid-row-gap: 15px;
+}
+
+.details-sub {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.details-sub h5 {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.price {
+    text-align: right;
+}
+
+.details p {
+    color: #1e0909;
+    font-size: 15px;
+    line-height: 25px;
+    align-self: stretch;
+}
+
+.details button {
+    background-color: #6220cb;
+    border: none;
+    color: #e3dbdb;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 7px;
+    width: 180px;
+}
+
+.btn {
+    color: rgb(1, 1, 11);
+    margin-top: 15px;
+    padding: 20px 20px;
+    border-radius: 25px;
+    background-color: rgb(244, 246, 243);
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+button:hover {
+    background-color: rgb(87, 78, 85);
+}
+
+/* Media Queries for Responsive Design */
+
+@media screen and (max-width: 1024px) {
+    .logo {
+        margin-right: 0;
+        text-align: center;
+    }
+    
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .navbar li {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .navbar li a {
+        font-size: 16px;
+        padding: 8px 10px;
+    }
+
+    #speaker {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap: 15px 30px;
+    }
+
+    .card img {
+        height: 40vh;
+    }
+
+    .details button {
+        width: 150px;
+    }
+
+    .btn {
+        font-size: 16px;
+        padding: 15px 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .logo {
+        font-size: 1.5rem;
+        margin-right: 0;
+    }
+
+    .navbar {
+        padding: 10px 0;
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    .navbar li {
+        margin: 5px 0;
+    }
+
+    .navbar li a {
+        font-size: 14px;
+        padding: 6px 8px;
+    }
+
+    #speaker {
+        grid-template-columns: 1fr;
+        grid-gap: 15px;
+    }
+
+    .card img {
+        height: 35vh;
+    }
+
+    .details button {
+        width: 140px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 10px 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo {
+        font-size: 1rem;
+    }
+
+    .navbar {
+        padding: 5px 0;
+        background-color: rgba(0, 0, 0, 1);
+    }
+
+    .navbar li a {
+        font-size: 12px;
+        padding: 5px 8px;
+    }
+
+    #speaker {
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+    }
+
+    .card img {
+        height: 30vh;
+    }
+
+    .details button {
+        width: 120px;
+    }
+
+    .btn {
+        font-size: 12px;
+        padding: 8px 8px;
+    }
+}
